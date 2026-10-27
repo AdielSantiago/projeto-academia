@@ -1,0 +1,2 @@
+# projeto-academia
+Uma aplicação web desenvolvida para fins acadêmicos com o objetivo de incentivar a prática segura de atividades físicas e musculação entre jovens, adultos e idosos. O projeto busca promover saúde, bem-estar e inclusão social através de uma interface intuitiva, responsiva e acessível, oferecendo guias de treino e orientações adaptadas para cada faixa etária. O site foi construído com HTML5, CSS3 e JavaScript puro.
