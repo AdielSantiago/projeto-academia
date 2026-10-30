@@ -1,6 +1,6 @@
 # 🏋️‍♂️ Aplicação Web de Saúde e Exercícios Físicos
 
-> Projeto acadêmico desenvolvido para criar uma experiência web acessível e responsiva voltada à promoção da atividade física para diferentes faixas etárias.
+> Projeto acadêmico em dupla:(Arthur Roma Nobrega e Adiel de Freitas Santiago)em busca de desenvolver uma experiência web acessível e responsiva voltada à promoção da atividade física para diferentes faixas etárias.
 
 ---
 
