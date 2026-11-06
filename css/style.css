@@ -13,7 +13,7 @@
     /* tons escuros */
     --preto: #0A0A0A;
     --cinza: #9c9c9c;
-    --cinza_escurecido: #2B2B2B;
+    --cinza_escurecido: #3a3a3a;
 }
 
 *{
@@ -58,16 +58,8 @@ nav > a:hover{
 
 
 main{
-    background-image: url('../image/background1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-   
-    color: var(--branco);
-
     padding: 10px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+    padding-top: 0px;
     margin: auto;
     width: 90vw;
     height: auto;
@@ -79,6 +71,14 @@ section{
     padding-left: 1.5vw;
 }
 section.Imagem_paralax{
+    background-image: url('../image/background1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    border-radius: 8px;
+   
+    color: var(--branco);
 
 }
 
@@ -89,9 +89,23 @@ section > h1{
 section > p{
     line-height: 1.7em;
     font-size: 1.3em;
-    text-shadow: 1px 1px black;
 } 
-
+section  input.caixa_input{
+    display: block;
+    margin: auto;
+    background-color: var(--cinza_escurecido);
+    outline: none;
+    padding: 10px;
+    border: 1px solid var(--cinza_escurecido);
+    width: 25%;
+    height: 2.5em;
+}
+section  input.caixa_input::placeholder{
+    color: var(--amarelo_forte);
+}
+section  input.caixa_input:hover{
+   border: 1.6px solid var(--amarelo);
+}
 footer{
     font-family: Arial, Helvetica, sans-serif;
     color: var(--branco);
