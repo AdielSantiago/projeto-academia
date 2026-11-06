@@ -76,6 +76,8 @@ section.Imagem_paralax{
     background-position: center;
     background-attachment: fixed;
 
+    min-height: 60vh;
+    
     border-radius: 8px;
    
     color: var(--branco);
