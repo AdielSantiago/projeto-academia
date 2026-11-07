@@ -153,52 +153,71 @@ div.cartões_de_destaque {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.26);
     margin-bottom: 20px;
     margin-right: 2%;
-    padding: 20px;
+    padding: 0;
     background-color: var(--cinza_escurecido);
-    border: 1.3px solid var(--cinza);
-    border-radius: 8px;
+    border-radius: 10px;
+    overflow: hidden;
     color: var(--branco);
+    transition-duration: 180ms;
 }
 
 div.cartões_de_destaque a {
+    padding-top: 10px;
     display: inline-block;
     margin-bottom: 12px;
     text-decoration: none;
-    color: var(--amarelo_claro);
+    color: var(--preto);
 }
 
 div.cartões_de_destaque a:hover {
     text-decoration: underline;
-    color: var(--amarelo);
+    color: var(--amarelo_claro);
+}
+
+div.cartões_de_destaque h4 {
+    background-color: var(--amarelo_forte);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 div.cartões_de_destaque p {
+    padding: 20px;
     line-height: 1.7em;
 }
 
 div.cartões_de_destaque:hover {
-    border: 2px solid var(--amarelo_forte);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.55);
+    transform: translateY(-6px) scale(1.02);
+    transition-duration: 150ms;
 }
 
-div.cartões_de_destaque input.caixa_input {
+section.input{
+    text-align: center;
+}
+
+section.input h1{
+    margin-bottom: 35px;
+}
+
+section.input input{
     display: block;
     margin: auto;
     background-color: var(--branco);
     outline: none;
     padding: 10px;
     border: 1px solid var(--cinza_escurecido);
-    width: 25%;
-    height: 2.5em;
+    min-width: 250px;
+    width: 25vw;
+    height: 3em;
 }
 
-div.cartões_de_destaque input.caixa_input::placeholder {
+section.input input::placeholder{
     color: var(--amarelo_forte);
 }
 
-div.cartões_de_destaque input.caixa_input:hover {
+section.input input:hover{
     border: 1.6px solid var(--amarelo);
 }
-
 
 /* =========================================
    RODAPÉ
