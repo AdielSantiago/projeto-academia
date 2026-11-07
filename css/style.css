@@ -1,58 +1,89 @@
 @charset "UTF-8";
 
 /* =========================================
-   VARIÁVEIS GLOBAIS (Paleta de Cores)
+   VARIÁVEIS GLOBAIS
    ========================================= */
-:root{ 
-    /* Tons claros */
+:root { 
     --amarelo_claro: #FFF2A9;
     --amarelo: #FFDB4D;
     --amarelo_forte: #FFCC00;
     --branco: #FFFFFF;
     
-    /* Tons escuros */
     --preto: #0A0A0A;
+    --cinza_claro: rgb(226, 224, 224);
     --cinza: #9c9c9c;
     --cinza_escurecido: #3a3a3a;
 }
 
+
 /* =========================================
-   RESET BÁSICO
+   RESET E CONFIGURAÇÕES GLOBAIS
    ========================================= */
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-html, body{
+html, body {
     height: 100vh;
 }
 
-body{
-    background-color: var(--branco);
+body {
+    background-color: var(--cinza_claro);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+
 /* =========================================
-   CABEÇALHO (Header e Navegação)
+   BARRA DE ROLAGEM
    ========================================= */
-header{
+html {
+    scrollbar-color: var(--amarelo_claro) var(--cinza_escurecido);
+    scrollbar-width: auto;
+}
+
+::-webkit-scrollbar {
+    width: 14px; 
+    height: 14px; 
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--preto); 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--amarelo);
+    border-radius: 6px; 
+    border: 3px solid var(--preto); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--amarelo_forte);
+}
+
+
+/* =========================================
+   CABEÇALHO E NAVEGAÇÃO
+   ========================================= */
+header {
     padding: 10px;
     background-color: var(--branco);
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.212);
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header > h1{
+header > h1 {
     color: var(--cinza_escurecido);
     margin-bottom: 3.0vw;
     text-align: center;
 }
 
-nav{
+nav {
     padding: 8px;
 }
 
-nav > a{
+nav > a {
     text-decoration: none;
     color: var(--amarelo);
     padding: 8px;
@@ -60,16 +91,17 @@ nav > a{
     font-weight: bold;
 }
 
-nav > a:hover{
+nav > a:hover {
     text-decoration: underline;
     color: var(--amarelo_forte);
     transition-duration: 230ms;
 }
 
+
 /* =========================================
-   CONTEÚDO PRINCIPAL (Main e Secções)
+   CONTEÚDO PRINCIPAL
    ========================================= */
-main{
+main {
     padding: 10px;
     padding-top: 0px;
     margin: auto;
@@ -78,37 +110,80 @@ main{
     overflow: auto;
 }
 
-section{
+section {
     margin-bottom: 20px;
     padding-left: 1.5vw;
 }
 
-/* Efeito Parallax da primeira secção */
-section.Imagem_paralax{
+section.Imagem_paralax {
     background-image: url('../image/background1.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.384);
     min-height: 60vh;
-    border-radius: 8px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     color: var(--branco);
 }
 
-section > h1{
+section > h1 {
     margin-bottom: 10px;
     font-size: 35px;
 }
 
-section > p{
+section > p {
     line-height: 1.7em;
     font-size: 1.3em;
 } 
 
-/* Estilização da caixa de texto (input) */
-section input.caixa_input{
+section#cards {
+    text-align: center;
+}
+
+
+/* =========================================
+   CARTÕES DE DESTAQUE
+   ========================================= */
+div.cartões_de_destaque {
+    display: inline-block;
+    vertical-align: top;
+    width: 42%;
+    min-height: 250px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.26);
+    margin-bottom: 20px;
+    margin-right: 2%;
+    padding: 20px;
+    background-color: var(--cinza_escurecido);
+    border: 1.3px solid var(--cinza);
+    border-radius: 8px;
+    color: var(--branco);
+}
+
+div.cartões_de_destaque a {
+    display: inline-block;
+    margin-bottom: 12px;
+    text-decoration: none;
+    color: var(--amarelo_claro);
+}
+
+div.cartões_de_destaque a:hover {
+    text-decoration: underline;
+    color: var(--amarelo);
+}
+
+div.cartões_de_destaque p {
+    line-height: 1.7em;
+}
+
+div.cartões_de_destaque:hover {
+    border: 2px solid var(--amarelo_forte);
+}
+
+div.cartões_de_destaque input.caixa_input {
     display: block;
     margin: auto;
-    background-color: var(--cinza_escurecido);
+    background-color: var(--branco);
     outline: none;
     padding: 10px;
     border: 1px solid var(--cinza_escurecido);
@@ -116,47 +191,47 @@ section input.caixa_input{
     height: 2.5em;
 }
 
-section input.caixa_input::placeholder{
+div.cartões_de_destaque input.caixa_input::placeholder {
     color: var(--amarelo_forte);
 }
 
-section input.caixa_input:hover{
+div.cartões_de_destaque input.caixa_input:hover {
     border: 1.6px solid var(--amarelo);
 }
 
+
 /* =========================================
-   RODAPÉ (Footer)
+   RODAPÉ
    ========================================= */
-footer{
-    font-family: Arial, Helvetica, sans-serif;
+footer {
     color: var(--branco);
     margin-top: 20px;
     height: 100vh;
     background-color: var(--preto);
 }
 
-footer > h4{
+footer > h4 {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 35px;
 }
 
-footer p{
+footer p {
     text-align: center;
 }
 
-footer a{
+footer a {
     padding-right: 10px;
     text-decoration: none;
     color: var(--branco);
 }
 
-footer a:hover{
+footer a:hover {
     text-decoration: underline;
     color: var(--cinza);
     transition-duration: 230ms;
 }
 
-footer hr{
+footer hr {
     color: var(--branco);
 }
