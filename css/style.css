@@ -1,21 +1,24 @@
-@charset "UTF08";
+@charset "UTF-8";
 
-
+/* =========================================
+   VARIÁVEIS GLOBAIS (Paleta de Cores)
+   ========================================= */
 :root{ 
-    /*cores selecionadas*/
-    
-    /* tons claros */
+    /* Tons claros */
     --amarelo_claro: #FFF2A9;
     --amarelo: #FFDB4D;
     --amarelo_forte: #FFCC00;
     --branco: #FFFFFF;
     
-    /* tons escuros */
+    /* Tons escuros */
     --preto: #0A0A0A;
     --cinza: #9c9c9c;
     --cinza_escurecido: #3a3a3a;
 }
 
+/* =========================================
+   RESET BÁSICO
+   ========================================= */
 *{
     margin: 0;
     padding: 0;
@@ -28,12 +31,17 @@ html, body{
 body{
     background-color: var(--branco);
 }
+
+/* =========================================
+   CABEÇALHO (Header e Navegação)
+   ========================================= */
 header{
     padding: 10px;
     background-color: var(--branco);
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.212);
     font-family: Arial, Helvetica, sans-serif;
 }
+
 header > h1{
     color: var(--cinza_escurecido);
     margin-bottom: 3.0vw;
@@ -43,6 +51,7 @@ header > h1{
 nav{
     padding: 8px;
 }
+
 nav > a{
     text-decoration: none;
     color: var(--amarelo);
@@ -50,13 +59,16 @@ nav > a{
     margin: 0px;
     font-weight: bold;
 }
+
 nav > a:hover{
     text-decoration: underline;
     color: var(--amarelo_forte);
     transition-duration: 230ms;
 }
 
-
+/* =========================================
+   CONTEÚDO PRINCIPAL (Main e Secções)
+   ========================================= */
 main{
     padding: 10px;
     padding-top: 0px;
@@ -70,29 +82,30 @@ section{
     margin-bottom: 20px;
     padding-left: 1.5vw;
 }
+
+/* Efeito Parallax da primeira secção */
 section.Imagem_paralax{
     background-image: url('../image/background1.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-
     min-height: 60vh;
-    
     border-radius: 8px;
-   
     color: var(--branco);
-
 }
 
 section > h1{
     margin-bottom: 10px;
     font-size: 35px;
 }
+
 section > p{
     line-height: 1.7em;
     font-size: 1.3em;
 } 
-section  input.caixa_input{
+
+/* Estilização da caixa de texto (input) */
+section input.caixa_input{
     display: block;
     margin: auto;
     background-color: var(--cinza_escurecido);
@@ -102,12 +115,18 @@ section  input.caixa_input{
     width: 25%;
     height: 2.5em;
 }
-section  input.caixa_input::placeholder{
+
+section input.caixa_input::placeholder{
     color: var(--amarelo_forte);
 }
-section  input.caixa_input:hover{
-   border: 1.6px solid var(--amarelo);
+
+section input.caixa_input:hover{
+    border: 1.6px solid var(--amarelo);
 }
+
+/* =========================================
+   RODAPÉ (Footer)
+   ========================================= */
 footer{
     font-family: Arial, Helvetica, sans-serif;
     color: var(--branco);
@@ -115,24 +134,29 @@ footer{
     height: 100vh;
     background-color: var(--preto);
 }
+
 footer > h4{
     text-align: center;
     padding-top: 20px;
     padding-bottom: 35px;
 }
+
 footer p{
     text-align: center;
 }
+
 footer a{
     padding-right: 10px;
     text-decoration: none;
     color: var(--branco);
 }
+
 footer a:hover{
     text-decoration: underline;
     color: var(--cinza);
     transition-duration: 230ms;
 }
+
 footer hr{
     color: var(--branco);
 }
