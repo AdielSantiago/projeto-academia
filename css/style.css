@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* =========================================
    VARIÁVEIS GLOBAIS
@@ -13,6 +15,9 @@
     --cinza_claro: rgb(226, 224, 224);
     --cinza: #9c9c9c;
     --cinza_escurecido: #3a3a3a;
+
+    --fonte_titulos: 'Oswald', sans-serif;
+    --fonte_paragrafos: 'Inter', sans-serif;
 }
 
 
@@ -34,6 +39,21 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+h1, h4{
+    font-family: var(--fonte_titulos);
+}
+
+p, a{
+    font-family: var(--fonte_paragrafos);
+}
+
+h4 a {
+    font-family: var(--fonte_titulos);
+}
+
+::placeholder{
+    font-family: var(--fonte_paragrafos);
+}
 
 /* =========================================
    BARRA DE ROLAGEM
@@ -85,7 +105,7 @@ nav {
 
 nav > a {
     text-decoration: none;
-    color: var(--amarelo);
+    color: var(--amarelo_forte);
     padding: 8px;
     margin: 0px;
     font-weight: bold;
@@ -93,7 +113,7 @@ nav > a {
 
 nav > a:hover {
     text-decoration: underline;
-    color: var(--amarelo_forte);
+    color: var(--amarelo);
     transition-duration: 230ms;
 }
 
@@ -217,6 +237,7 @@ section.input input::placeholder{
 
 section.input input:hover{
     border: 1.6px solid var(--amarelo);
+    box-shadow: 0px 0px 2px var(--amarelo_claro);
 }
 
 /* =========================================
