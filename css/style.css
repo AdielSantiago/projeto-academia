@@ -94,6 +94,7 @@ header {
 }
 
 header > h1 {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.301);
     color: var(--cinza_escurecido);
     margin-bottom: 3.0vw;
     text-align: center;
@@ -109,12 +110,16 @@ nav > a {
     padding: 8px;
     margin: 0px;
     font-weight: bold;
+    transition-duration: 200ms;
 }
 
 nav > a:hover {
+    letter-spacing: 0.8px;
     text-decoration: underline;
-    color: var(--amarelo);
+    color: var(--amarelo_forte);
     transition-duration: 230ms;
+    text-shadow: 0px 0px 1px var(--amarelo);
+    transition-duration: 200ms;
 }
 
 
@@ -185,13 +190,17 @@ div.cartões_de_destaque a {
     padding-top: 10px;
     display: inline-block;
     margin-bottom: 12px;
-    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 4px;
     color: var(--preto);
+    transition-duration: 230ms;
 }
 
 div.cartões_de_destaque a:hover {
     text-decoration: underline;
+    text-underline-offset: 6px;
     color: var(--amarelo_claro);
+    transition-duration: 230ms;
 }
 
 div.cartões_de_destaque h4 {
@@ -225,6 +234,7 @@ section.input input{
     background-color: var(--branco);
     outline: none;
     padding: 10px;
+    padding-left: 18px;
     border: 1px solid var(--cinza_escurecido);
     min-width: 250px;
     width: 25vw;
@@ -238,6 +248,7 @@ section.input input::placeholder{
 section.input input:hover{
     border: 1.6px solid var(--amarelo);
     box-shadow: 0px 0px 2px var(--amarelo_claro);
+    transition-duration: 180ms;
 }
 
 /* =========================================
