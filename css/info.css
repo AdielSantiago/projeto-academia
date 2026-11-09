@@ -43,7 +43,7 @@ h1, h2, h4 {
    BARRA DE ROLAGEM
    ========================================= */
 html {
-    scrollbar-color: var(--amarelo_claro) var(--cinza_escurecido);
+    scrollbar-color: var(--branco) var(--cinza_escurecido);
     scrollbar-width: auto;
 }
 
@@ -63,7 +63,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--amarelo_forte);
+    background-color: var(--branco);
 }
 
 /* =========================================
@@ -71,15 +71,15 @@ html {
    ================================================================= */
 header {
     padding: 10px;
-    background-color: var(--branco);
+    background-color: var(--amarelo_forte);
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.212);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 header > h1 {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.301);
-    color: var(--cinza_escurecido);
-    margin-bottom: 3.0vw;
+    color: var(--branco);
+    margin-bottom: 1vw;
     text-align: center;
 }
 
@@ -89,7 +89,7 @@ nav {
 
 nav > a {
     text-decoration: none;
-    color: var(--amarelo_forte);
+    color: var(--branco);
     padding: 8px;
     margin: 0px;
     font-weight: bold;
@@ -99,7 +99,7 @@ nav > a {
 nav > a:hover {
     letter-spacing: 0.8px;
     text-decoration: underline;
-    color: var(--amarelo_forte);
+    color: var(--branco);
     transition-duration: 230ms;
     text-shadow: 0px 0px 1px var(--amarelo);
 }
@@ -111,7 +111,7 @@ nav > a:hover {
 main{
     width: 75vw;
     margin: 40px auto;
-    background-color: var(--branco);
+    background-color: var(--amarelo_claro);
     padding: 40px;
     border-radius: 10px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.178);
