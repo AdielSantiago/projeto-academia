@@ -14,6 +14,5 @@ Aplicação web focada em saúde, bem-estar e inclusão física para jovens, adu
 
 * **HTML5:** Estruturação semântica e acessível.
 * **CSS3:** Estilização, layout flexível e design responsivo.
-* **JavaScript:** Interatividade da interface e manipulação do DOM.
 
 ---
