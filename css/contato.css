@@ -1,0 +1,306 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* ---------- 1. VARIÁVEIS (cores e medidas) ----------
+   Para trocar uma cor em todo o site, mude só a linha aqui. */
+:root {
+  --preto: #000000;            /* fundo principal */
+  --preto-suave: #1a1a1a;      /* fundo do cabeçalho */
+  --cinza-escuro: #1c1c1c;     /* itens do FAQ */
+  --cinza-claro: #f2f2f2;      /* cards e campos */
+  --cinza-texto: #6b6b6b;      /* textos secundários nos cards */
+  --amarelo: #ffc20e;          /* botão e destaques */
+  --amarelo-escuro: #e6ac00;   /* hover do botão */
+  --dourado: #e6a800;          /* ícones */
+  --branco: #ffffff;
+  --raio: 12px;                /* arredondamento das bordas */
+}
+
+
+/* ---------- 2. RESET BÁSICO ----------
+   Remove margens padrão do navegador e faz "width" incluir
+   padding e borda (facilita calcular tamanhos). */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: var(--preto);
+  color: var(--branco);
+  line-height: 1.5;
+}
+
+/* Container: limita a largura do conteúdo e centraliza na tela */
+.container {
+  max-width: 860px;
+  margin: 0 auto;              /* "auto" nas laterais = centralizado */
+  padding: 0 20px;
+}
+
+
+/* ---------- 3. CABEÇALHO ---------- */
+.cabecalho {
+  background-color: var(--preto-suave);
+  padding: 56px 0 32px;
+}
+
+.cabecalho__titulo {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.cabecalho__subtitulo {
+  font-size: 1rem;
+  color: var(--branco);
+}
+
+
+/* ---------- 4. CARDS DE CONTATO ----------
+   "display: grid" com 2 colunas iguais (1fr 1fr) cria as duas colunas.
+   "gap" é o espaço entre os cards. */
+.contato-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 24px 0 48px;
+}
+
+.info-card {
+  background-color: var(--cinza-claro);
+  border-radius: var(--raio);
+  padding: 20px 24px;
+  color: var(--preto);         /* texto escuro para ler bem no fundo claro */
+}
+
+/* Ícone amarelo/dourado.
+   Os SVG usam "stroke" (contorno) e não "fill" (preenchimento). */
+.info-card__icone {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 10px;
+  fill: none;
+  stroke: var(--dourado);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.info-card__titulo {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.info-card__texto {
+  font-size: 0.95rem;
+  color: var(--cinza-texto);
+}
+
+/* Link do e-mail: mantém a cor do texto e sublinha só no hover */
+.info-card__texto a {
+  color: inherit;              /* "inherit" = usa a cor do elemento pai */
+  text-decoration: none;
+}
+
+.info-card__texto a:hover {
+  text-decoration: underline;
+}
+
+
+/* ---------- 5. TÍTULO DE SEÇÃO (usado no formulário e no FAQ) ---------- */
+.secao__titulo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+
+/* ---------- 6. FORMULÁRIO ---------- */
+.formulario {
+  margin-bottom: 64px;
+}
+
+/* Cada campo (rótulo + input) fica um embaixo do outro */
+.campo {
+  margin-bottom: 16px;
+}
+
+.campo label {
+  display: block;              /* o rótulo ocupa sua própria linha */
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+/* Estilo único para todos os campos de uma vez */
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: var(--cinza-claro);
+  color: var(--preto);
+  border: 2px solid transparent;   /* borda invisível, aparece no foco */
+  border-radius: var(--raio);
+  font-family: inherit;        /* usa a mesma fonte do site (por padrão, campos não usam) */
+  font-size: 0.95rem;
+}
+
+.campo textarea {
+  resize: vertical;            /* usuário só pode aumentar a altura, não a largura */
+  min-height: 130px;
+}
+
+/* Cor do texto de exemplo (placeholder) */
+.campo input::placeholder,
+.campo textarea::placeholder {
+  color: #8a8a8a;
+}
+
+/* FOCO: quando o usuário clica ou navega com Tab, a borda fica amarela */
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: var(--amarelo);
+}
+
+
+/* ---------- 7. BOTÃO AMARELO ---------- */
+.botao {
+  width: 100%;
+  margin-top: 8px;
+  padding: 16px 20px;
+  background-color: var(--amarelo);
+  color: var(--preto);
+  border: none;
+  border-radius: 50px;         /* formato de pílula */
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;             /* mostra a "mãozinha" ao passar o mouse */
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* HOVER: amarelo mais escuro e leve aumento */
+.botao:hover {
+  background-color: var(--amarelo-escuro);
+  transform: scale(1.02);
+}
+
+.botao:focus-visible {
+  outline: 3px solid var(--branco);
+  outline-offset: 3px;
+}
+
+
+/* ---------- 8. FAQ (perguntas frequentes) ---------- */
+.faq {
+  margin-bottom: 80px;
+}
+
+/* Cada pergunta é uma caixinha cinza-escura */
+.faq__item {
+  background-color: var(--cinza-escuro);
+  border: 1px solid #2c2c2c;
+  border-radius: var(--raio);
+  margin-bottom: 12px;
+  overflow: hidden;            /* mantém o conteúdo dentro dos cantos arredondados */
+}
+
+/* A pergunta (parte clicável do <details>) */
+.faq__item summary {
+  position: relative;
+  padding: 18px 56px 18px 20px;   /* espaço à direita para o sinal de + */
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;            /* remove a setinha padrão do navegador (Firefox e Chrome) */
+}
+
+/* Remove a setinha padrão no Safari */
+.faq__item summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Sinal de "+" amarelo criado com CSS, no lado direito */
+.faq__item summary::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%); /* centraliza na vertical */
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--amarelo);
+}
+
+/* Quando o item está ABERTO, o navegador coloca o atributo "open"
+   no <details>. Usamos isso para trocar o "+" por "−" e destacar a borda. */
+.faq__item[open] summary::after {
+  content: "−";
+}
+
+.faq__item[open] {
+  border-color: var(--amarelo);
+}
+
+.faq__item summary:hover {
+  color: var(--amarelo);
+}
+
+.faq__item summary:focus-visible {
+  outline: 2px solid var(--amarelo);
+  outline-offset: -2px;
+}
+
+/* A resposta que aparece ao abrir */
+.faq__item p {
+  padding: 0 20px 20px;
+  color: #d0d0d0;
+  font-size: 0.95rem;
+}
+
+
+/* ==========================================================
+   9. RESPONSIVIDADE (Media Queries)
+   "@media (max-width: 640px)" significa: "aplique estas regras
+   quando a tela tiver 640px de largura ou MENOS" (celulares).
+   ========================================================== */
+@media (max-width: 640px) {
+
+  .cabecalho {
+    padding: 40px 0 24px;
+  }
+
+  .cabecalho__titulo {
+    font-size: 1.8rem;
+  }
+
+  /* Cards empilhados: apenas 1 coluna */
+  .contato-cards {
+    grid-template-columns: 1fr;
+    margin-bottom: 40px;
+  }
+
+  .secao__titulo {
+    font-size: 1.3rem;
+  }
+
+  .formulario,
+  .faq {
+    margin-bottom: 48px;
+  }
+
+  .faq__item summary {
+    padding: 16px 48px 16px 16px;
+    font-size: 0.95rem;
+  }
+
+  .faq__item p {
+    padding: 0 16px 16px;
+  }
+}

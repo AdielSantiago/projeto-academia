@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <!-- Necessário para a página funcionar bem no celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | Smart Gym</title>
+
+  <!-- Fonte Poppins (Google Fonts). Se não carregar, o CSS usa Arial -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Arquivo de estilos (deve ficar na mesma pasta deste HTML) -->
+  <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+
+  <!-- ============ 1. CABEÇALHO DA PÁGINA ============ -->
+  <header class="cabecalho">
+    <div class="container">
+      <h1 class="cabecalho__titulo">Vamos conversar?</h1>
+      <p class="cabecalho__subtitulo">Estamos prontos para ajudar você a alcançar seus objetivos.</p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ============ 2. CARDS DE CONTATO ============ -->
+    <section class="contato-cards" aria-label="Informações de contato">
+
+      <!-- Card: Telefone -->
+      <div class="info-card">
+        <!-- Os ícones são SVG escritos direto no HTML (não precisam de imagem) -->
+        <svg class="info-card__icone" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>
+        </svg>
+        <h2 class="info-card__titulo">Telefone</h2>
+        <p class="info-card__texto">(83) 99999-9999</p>
+      </div>
+
+      <!-- Card: E-mail -->
+      <div class="info-card">
+        <svg class="info-card__icone" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="m22 7-10 6L2 7"/>
+        </svg>
+        <h2 class="info-card__titulo">E-mail</h2>
+        <p class="info-card__texto">
+          <a href="mailto:contato@smartgym.com">contato@smartgym.com</a>
+        </p>
+      </div>
+
+      <!-- Card: Endereço -->
+      <div class="info-card">
+        <svg class="info-card__icone" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+        <h2 class="info-card__titulo">Endereço</h2>
+        <p class="info-card__texto">Localização da academia</p>
+      </div>
+
+      <!-- Card: Funcionamento -->
+      <div class="info-card">
+        <svg class="info-card__icone" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 6v6l4 2"/>
+        </svg>
+        <h2 class="info-card__titulo">Funcionamento</h2>
+        <p class="info-card__texto">Segunda a sábado, das 06h às 22h</p>
+      </div>
+
+    </section>
+
+
+    <!-- ============ 3. FORMULÁRIO ============ -->
+    <section class="formulario" aria-labelledby="titulo-formulario">
+      <h2 class="secao__titulo" id="titulo-formulario">Envie uma mensagem</h2>
+
+      <!-- action="#": ainda não há backend, então o formulário não envia para lugar nenhum -->
+      <form class="formulario__corpo" action="#" method="post">
+
+        <div class="campo">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+        </div>
+
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+        </div>
+
+        <div class="campo">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(83) 99999-9999">
+        </div>
+
+        <div class="campo">
+          <label for="assunto">Assunto</label>
+          <select id="assunto" name="assunto" required>
+            <option value="" selected disabled>Selecione o assunto</option>
+            <option value="matricula">Matrícula</option>
+            <option value="planos">Planos e valores</option>
+            <option value="aula-experimental">Aula experimental</option>
+            <option value="cancelamento">Cancelamento</option>
+            <option value="outros">Outros</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem..." required></textarea>
+        </div>
+
+        <button type="submit" class="botao">Enviar mensagem</button>
+      </form>
+    </section>
+
+
+    <!-- ============ 4. PERGUNTAS FREQUENTES (FAQ) ============ -->
+    <section class="faq" aria-labelledby="titulo-faq">
+      <h2 class="secao__titulo" id="titulo-faq">Perguntas frequentes</h2>
+
+      <!-- <details> + <summary> = item expansível nativo do HTML, sem JavaScript.
+           Clicar no <summary> mostra ou esconde o resto do conteúdo. -->
+
+      <details class="faq__item">
+        <summary>Como faço para me matricular na academia?</summary>
+        <p>Você pode se matricular presencialmente na recepção, levando um documento com foto, ou entrar em contato conosco pelo telefone ou pelo formulário desta página.</p>
+      </details>
+
+      <details class="faq__item">
+        <summary>Quais são os planos disponíveis?</summary>
+        <p>Temos três planos: Black (R$ 149,90/mês), com acesso a todas as unidades; Fit (R$ 99,90/mês), com treinos personalizados na unidade escolhida; e Smart (R$ 79,90/mês), o plano econômico e sem fidelidade.</p>
+      </details>
+
+      <details class="faq__item">
+        <summary>Posso fazer uma aula experimental?</summary>
+        <p>Sim! Entre em contato para agendar uma aula experimental e conhecer a estrutura da academia antes de escolher seu plano.</p>
+      </details>
+
+      <details class="faq__item">
+        <summary>Qual é o horário de funcionamento?</summary>
+        <p>Funcionamos de segunda a sábado, das 06h às 22h.</p>
+      </details>
+
+      <details class="faq__item">
+        <summary>Posso cancelar meu plano?</summary>
+        <p>Sim. O plano Smart não tem fidelidade e pode ser cancelado a qualquer momento. Para os demais planos, consulte as condições com nossa equipe.</p>
+      </details>
+
+      <details class="faq__item">
+        <summary>A academia possui acompanhamento profissional?</summary>
+        <p>Sim. Nossa equipe de profissionais de Educação Física orienta os exercícios e ajuda a montar o treino ideal para o seu objetivo.</p>
+      </details>
+
+      <details class="faq__item">
+        <summary>Quais modalidades são oferecidas?</summary>
+        <p>Oferecemos musculação e cardio. Para saber sobre outras modalidades e aulas coletivas, fale com a nossa equipe.</p>
+      </details>
+    </section>
+
+  </main>
+
+</body>
+</html>
