@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planos | Minha Academia</title>
+
+  <!-- Fonte Poppins (Google Fonts). Se não carregar, o CSS usa uma fonte padrão -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Arquivo de estilos (deve estar na mesma pasta deste HTML) -->
+  <link rel="stylesheet" href="planos.css">
+</head>
+<body>
+
+  <!-- ============ SEÇÃO DE PLANOS ============ -->
+  <section class="planos">
+    <div class="planos__container">
+
+      <!-- Título da seção -->
+      <header class="planos__cabecalho">
+        <h2 class="planos__titulo">Escolha o plano ideal para você</h2>
+        <p class="planos__subtitulo">Treine do seu jeito, com o plano que cabe no seu bolso.</p>
+      </header>
+
+      <!-- Grade que organiza os 3 cards lado a lado -->
+      <div class="planos__grade">
+
+        <!-- ===== CARD 1: PLANO BLACK (em destaque) ===== -->
+        <article class="card card--destaque">
+          <h3 class="card__nome">Plano Black</h3>
+          <p class="card__descricao">O plano mais completo para quem quer liberdade total.</p>
+
+          <div class="card__preco">
+            <!-- Preço antigo riscado (apague esta linha se não quiser mostrar) -->
+            <span class="card__preco-antigo">R$ 179,90</span>
+            <p class="card__preco-atual">
+              <span class="card__moeda">R$</span>149,90<span class="card__periodo">/mês</span>
+            </p>
+          </div>
+
+          <ul class="card__beneficios">
+            <li>Treine em qualquer unidade da academia</li>
+            <li>Acesso ilimitado</li>
+            <li>Acompanhamento especial</li>
+            <li>Benefícios exclusivos</li>
+          </ul>
+
+          <a href="#" class="card__botao">Escolher plano</a>
+        </article>
+
+        <!-- ===== CARD 2: PLANO FIT ===== -->
+        <article class="card">
+          <h3 class="card__nome">Plano Fit</h3>
+          <p class="card__descricao">Treinos orientados na unidade que você escolher.</p>
+
+          <div class="card__preco">
+            <span class="card__preco-antigo">R$ 119,90</span>
+            <p class="card__preco-atual">
+              <span class="card__moeda">R$</span>99,90<span class="card__periodo">/mês</span>
+            </p>
+          </div>
+
+          <ul class="card__beneficios">
+            <li>Acesso à unidade escolhida</li>
+            <li>Treinos personalizados</li>
+            <li>Acompanhamento dos exercícios</li>
+            <li>Benefícios inclusos</li>
+          </ul>
+
+          <a href="#" class="card__botao">Escolher plano</a>
+        </article>
+
+        <!-- ===== CARD 3: PLANO SMART ===== -->
+        <article class="card">
+          <h3 class="card__nome">Plano Smart</h3>
+          <p class="card__descricao">O plano econômico para começar a treinar hoje.</p>
+
+          <div class="card__preco">
+            <!-- Este plano não tem preço antigo, então não há linha riscada -->
+            <p class="card__preco-atual">
+              <span class="card__moeda">R$</span>79,90<span class="card__periodo">/mês</span>
+            </p>
+          </div>
+
+          <ul class="card__beneficios">
+            <li>Plano econômico</li>
+            <li>Acesso à academia contratada</li>
+            <li>Equipamentos de musculação e cardio</li>
+            <li>Sem fidelidade</li>
+          </ul>
+
+          <a href="#" class="card__botao">Escolher plano</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

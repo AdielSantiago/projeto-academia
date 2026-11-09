@@ -1,0 +1,289 @@
+/* ==========================================================
+   PLANOS DA ACADEMIA - estilos
+   Dica: use Ctrl+F para encontrar cada parte pelo comentário.
+   ========================================================== */
+
+
+/* ---------- 1. VARIÁVEIS (cores e medidas) ----------
+   Aqui ficam as cores do site. Se quiser trocar o amarelo,
+   por exemplo, basta mudar UMA linha e tudo se atualiza. */
+:root {
+  --amarelo: #ffc20e;
+  --amarelo-escuro: #e6ac00;   /* amarelo do hover dos botões */
+  --preto: #000000;
+  --branco: #ffffff;
+  --cinza-fundo: #f2f2f2;      /* fundo da seção */
+  --cinza-texto: #6b6b6b;      /* textos secundários */
+  --cinza-borda: #dcdcdc;
+  --raio: 16px;                /* arredondamento das bordas */
+}
+
+
+/* ---------- 2. RESET BÁSICO ----------
+   Remove margens padrão do navegador e faz o "width" incluir
+   padding e borda (facilita muito calcular tamanhos). */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;  /* se Poppins falhar, usa Arial */
+  color: var(--preto);
+}
+
+
+/* ---------- 3. SEÇÃO E CABEÇALHO ---------- */
+.planos {
+  background-color: var(--cinza-fundo);
+  padding: 80px 20px;           /* espaço em cima/baixo e nas laterais */
+}
+
+/* Container limita a largura e centraliza o conteúdo */
+.planos__container {
+  max-width: 1100px;
+  margin: 0 auto;               /* "auto" nas laterais = centralizado */
+}
+
+.planos__cabecalho {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.planos__titulo {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.planos__subtitulo {
+  font-size: 1.05rem;
+  color: var(--cinza-texto);
+}
+
+
+/* ---------- 4. GRADE DOS CARDS ----------
+   "display: grid" com 3 colunas iguais (1fr 1fr 1fr)
+   coloca os cards lado a lado. "gap" é o espaço entre eles. */
+.planos__grade {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;         /* cards com a mesma altura */
+}
+
+
+/* ---------- 5. CARD (visual base, usado nos 3 planos) ---------- */
+.card {
+  display: flex;                /* permite empurrar o botão para baixo */
+  flex-direction: column;
+  background-color: var(--branco);
+  border: 2px solid var(--cinza-borda);
+  border-radius: var(--raio);
+  padding: 32px 28px;           /* espaçamento interno confortável */
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);   /* sombra suave */
+
+  /* "transition" faz o hover acontecer de forma suave, não de repente */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* HOVER do card: sobe um pouco e a sombra aumenta */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Nome do plano em destaque */
+.card__nome {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+/* Descrição logo abaixo do nome */
+.card__descricao {
+  font-size: 0.95rem;
+  color: var(--cinza-texto);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+
+/* ---------- 6. PREÇO ---------- */
+.card__preco {
+  margin-bottom: 24px;
+  min-height: 84px;             /* mantém o alinhamento mesmo sem preço antigo */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;    /* preço sempre colado na mesma linha */
+}
+
+/* Preço antigo riscado */
+.card__preco-antigo {
+  font-size: 0.95rem;
+  color: var(--cinza-texto);
+  text-decoration: line-through;   /* é isto que risca o texto */
+}
+
+/* Preço atual: grande e em negrito */
+.card__preco-atual {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+/* "R$" menor, ao lado do valor */
+.card__moeda {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+/* "/mês" menor e mais discreto */
+.card__periodo {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--cinza-texto);
+}
+
+
+/* ---------- 7. LISTA DE BENEFÍCIOS COM ÍCONE DE CHECK ---------- */
+.card__beneficios {
+  list-style: none;             /* remove as bolinhas padrão da lista */
+  margin-bottom: 32px;
+  flex-grow: 1;                 /* ocupa o espaço livre e empurra o botão p/ baixo */
+}
+
+.card__beneficios li {
+  position: relative;           /* referência para posicionar o check */
+  padding-left: 34px;           /* deixa espaço para o ícone à esquerda */
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* O ícone de check é criado com ::before (um "elemento invisível"
+   criado pelo CSS antes do texto), então não precisa de imagem. */
+.card__beneficios li::before {
+  content: "✓";                 /* o símbolo do check */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;           /* 50% = círculo */
+  background-color: var(--amarelo);
+  color: var(--preto);
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;                /* centraliza o check dentro do círculo */
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ---------- 8. BOTÃO "ESCOLHER PLANO" ---------- */
+.card__botao {
+  display: block;               /* link ocupa a largura toda, como um botão */
+  text-align: center;
+  text-decoration: none;        /* tira o sublinhado do link */
+  padding: 14px 20px;
+  border-radius: 50px;          /* botão em formato de pílula */
+  background-color: var(--amarelo);
+  color: var(--preto);
+  font-size: 1rem;
+  font-weight: 700;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* HOVER do botão: amarelo mais escuro e leve aumento */
+.card__botao:hover {
+  background-color: var(--amarelo-escuro);
+  transform: scale(1.03);
+}
+
+/* Foco pelo teclado (tecla Tab): importante para acessibilidade */
+.card__botao:focus-visible {
+  outline: 3px solid var(--preto);
+  outline-offset: 3px;
+}
+
+
+/* ---------- 9. PLANO BLACK (destaque) ----------
+   Esta classe é adicionada junto com "card" no HTML
+   (class="card card--destaque") e SOBRESCREVE as cores. */
+.card--destaque {
+  background-color: var(--preto);
+  border-color: var(--amarelo);
+  color: var(--branco);
+}
+
+.card--destaque .card__descricao,
+.card--destaque .card__preco-antigo,
+.card--destaque .card__periodo {
+  color: #b5b5b5;               /* cinza claro para ler bem no fundo preto */
+}
+
+/* Botão do plano Black: hover fica branco */
+.card--destaque .card__botao:hover {
+  background-color: var(--branco);
+}
+
+
+/* ==========================================================
+   10. RESPONSIVIDADE (Media Queries)
+   "@media (max-width: 900px)" significa: "aplique estas regras
+   quando a tela tiver 900px de largura ou MENOS".
+   ========================================================== */
+
+/* ----- TABLETS (até 1024px): cards um pouco menores, ainda lado a lado ----- */
+@media (max-width: 1024px) {
+  .planos__grade {
+    gap: 16px;
+  }
+
+  .card {
+    padding: 28px 20px;
+  }
+
+  .card__nome {
+    font-size: 1.35rem;
+  }
+
+  .card__preco-atual {
+    font-size: 2.5rem;
+  }
+
+  .card__beneficios li,
+  .card__descricao {
+    font-size: 0.9rem;
+  }
+}
+
+/* ----- TABLETS PEQUENOS E CELULARES (até 768px): um card embaixo do outro ----- */
+@media (max-width: 768px) {
+  .planos {
+    padding: 56px 16px;
+  }
+
+  .planos__titulo {
+    font-size: 1.7rem;
+  }
+
+  /* Apenas 1 coluna: os cards ficam empilhados */
+  .planos__grade {
+    grid-template-columns: 1fr;
+    max-width: 440px;           /* evita cards gigantes em tablets */
+    margin: 0 auto;             /* centraliza a coluna */
+    gap: 24px;
+  }
+
+  .card {
+    padding: 28px 24px;
+  }
+
+  .card__preco-atual {
+    font-size: 2.8rem;
+  }
+}
