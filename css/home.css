@@ -36,9 +36,12 @@ html, body {
 }
 
 body {
+    min-height: 100vh;
+    width: 100%;
     background-color: var(--cinza_claro);
     font-family: Arial, Helvetica, sans-serif;
 }
+
 
 h1, h4{
     font-family: var(--fonte_titulos);
@@ -60,6 +63,7 @@ h4 a {
    BARRA DE ROLAGEM
    ========================================= */
 html {
+    overflow-x: hidden; 
     scrollbar-color: var(--branco) var(--cinza_escurecido);
     scrollbar-width: auto;
 }
@@ -128,17 +132,18 @@ nav > a:hover {
    CONTEÚDO PRINCIPAL
    ========================================= */
 main {
-    padding: 10px;
+    padding: 0;
     padding-top: 0px;
-    margin: auto;
-    width: 90vw;
+    margin: 0; /* Remove o auto para colar nas laterais se necessário */
+    width: 100vw; /* Retorna exatamente a largura de antes */
+    max-width: 100%; /* Impede que ultrapasse a tela e gere barra de rolagem */
     height: auto;
     overflow: auto;
 }
 
 section {
     margin-bottom: 20px;
-    padding-left: 1.5vw;
+    
 }
 
 section.Imagem_paralax {
@@ -147,9 +152,8 @@ section.Imagem_paralax {
     background-position: center;
     background-attachment: fixed;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.384);
+    box-shadow: inset 4px 4px 11px 0px rgba(0, 0, 0, 0.455);
     min-height: 60vh;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
     color: var(--branco);
 
     text-align: center;
