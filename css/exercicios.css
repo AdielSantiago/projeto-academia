@@ -51,7 +51,6 @@ h1 {
 
 header p {
     margin: 0;
-    color: #bbbbbb;
     font-size: 18px;
 }
 
@@ -78,6 +77,7 @@ h2 {
 
 /* ---------- Cada exercício ---------- */
 article {
+    line-height: 2em;
     display: flex;
     align-items: center;
     margin-bottom: 25px;
@@ -85,7 +85,7 @@ article {
     background-color: var(--cinza_escurecido);
     border: 1px solid #3a3a3a;
     border-radius: 8px;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.299);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.29);
 }
 
 /* Foto da máquina (lado esquerdo) */
@@ -110,11 +110,11 @@ h3 {
 
 article p {
     margin: 0 0 8px 0;
-    color: #dddddd;
+    color: var(--branco);
 }
 
 strong {
-    color: #ffffff;
+    color: var(--amarelo_claro)
 }
 
 /* ---------- Rodapé ---------- */
