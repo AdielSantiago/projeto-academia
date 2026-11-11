@@ -1,21 +1,44 @@
 @charset "UTF-8";
 @import url();
 
+
+:root { 
+    --amarelo_claro: #FFF2A9;
+    --amarelo: #FFDB4D;
+    --amarelo_forte: #FFCC00;
+    --branco: #FFFFFF;
+    
+    --preto: #0A0A0A;
+    --cinza_claro: rgb(230, 227, 227);
+    --cinza: #9c9c9c;
+    --cinza_escurecido: #3a3a3a;
+
+    --fonte_titulos: 'Oswald', sans-serif;
+    --fonte_paragrafos: 'Inter', sans-serif;
+}
+
 /* ---------- Geral ---------- */
 body {
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a;
+    background-color: var(--cinza_claro);
     color: #e5e5e5;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.6;
+}
+
+h1, h4, h3, h2{
+    font-family: var(--fonte_titulos);
+}
+
+p, a{
+    font-family: var(--fonte_paragrafos);
 }
 
 /* ---------- Cabeçalho ---------- */
 header {
     background-color: #111111;
-    border-bottom: 4px solid #e63946;
+    border-bottom: 4px solid var(--amarelo_forte);
     padding: 40px 20px;
     text-align: center;
 }
@@ -48,8 +71,8 @@ section {
 h2 {
     margin: 0 0 20px 0;
     padding-left: 12px;
-    border-left: 6px solid #e63946;
-    color: #ffffff;
+    border-left: 6px solid var(--amarelo_forte);
+    color: var(--cinza_escurecido);
     font-size: 30px;
 }
 
@@ -59,9 +82,10 @@ article {
     align-items: center;
     margin-bottom: 25px;
     padding: 20px;
-    background-color: #242424;
+    background-color: var(--cinza_escurecido);
     border: 1px solid #3a3a3a;
     border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.299);
 }
 
 /* Foto da máquina (lado esquerdo) */
@@ -80,7 +104,7 @@ article div {
 
 h3 {
     margin: 0 0 10px 0;
-    color: #e63946;
+    color: var(--amarelo);
     font-size: 24px;
 }
 
@@ -98,7 +122,7 @@ footer {
     margin-top: 40px;
     padding: 25px 20px;
     background-color: #111111;
-    border-top: 4px solid #e63946;
+    border-top: 4px solid var(--amarelo);
     text-align: center;
     color: #999999;
     font-size: 14px;
