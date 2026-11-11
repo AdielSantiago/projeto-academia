@@ -287,24 +287,31 @@ section.input input:hover{
    RODAPÉ
    ========================================= */
 footer {
-    color: var(--branco);
     margin-top: 40px;
-    padding: 30px 0;
-    background-color: var(--preto);
+    padding: 25px 20px;
+    background-color: #111111;
+    border-top: 4px solid var(--amarelo);
     text-align: center;
-}
-
-footer h4 {
-    margin-bottom: 15px;
-}
-
-footer p a {
     color: var(--branco);
-    text-decoration: none;
+    font-size: 14px;
 }
 
-footer p a:hover {
+footer p {
+    margin: 0;
+}
+
+footer a{
+    padding-top: 10px;
+    display: inline-block;
     text-decoration: underline;
-    color: var(--cinza);
+    text-underline-offset: 4px;
+    color: var(--amarelo_claro);
+    transition-duration: 230ms;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    color: var(--amarelo_claro);
     transition-duration: 230ms;
 }
