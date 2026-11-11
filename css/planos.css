@@ -208,6 +208,40 @@ body {
   background-color: var(--branco);
 }
 
+/* =========================================
+   RODAPÉ
+   ========================================= */
+footer {
+    margin-top: 40px;
+    padding: 25px 20px;
+    background-color: #111111;
+    border-top: 4px solid var(--amarelo);
+    text-align: center;
+    color: var(--branco);
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a{
+    padding-top: 10px;
+    display: inline-block;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    color: var(--amarelo_claro);
+    transition-duration: 230ms;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    color: var(--amarelo_claro);
+    transition-duration: 230ms;
+}
+
+
 /* ---------- RESPONSIVIDADE ---------- */
 @media (max-width: 1024px) {
   .card {
