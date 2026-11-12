@@ -24,7 +24,7 @@
 /* =========================================
    RESET E CONFIGURAÇÕES GLOBAIS
    ========================================= */
-* {
+ *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -42,12 +42,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-h1, h4{
+h1, h4 {
     font-family: var(--fonte_titulos);
 }
 
-p, a{
+p, a {
     font-family: var(--fonte_paragrafos);
 }
 
@@ -55,9 +54,10 @@ h4 a {
     font-family: var(--fonte_titulos);
 }
 
-::placeholder{
+::placeholder {
     font-family: var(--fonte_paragrafos);
 }
+
 
 /* =========================================
    BARRA DE ROLAGEM
@@ -134,16 +134,15 @@ nav > a:hover {
 main {
     padding: 0;
     padding-top: 0px;
-    margin: 0; /* Remove o auto para colar nas laterais se necessário */
-    width: 100vw; /* Retorna exatamente a largura de antes */
-    max-width: 100%; /* Impede que ultrapasse a tela e gere barra de rolagem */
+    margin: 0;
+    width: 100vw;
+    max-width: 100%;
     height: auto;
     overflow: auto;
 }
 
 section {
     margin-bottom: 20px;
-    
 }
 
 section.Imagem_paralax {
@@ -155,7 +154,6 @@ section.Imagem_paralax {
     box-shadow: inset 4px 4px 11px 0px rgba(0, 0, 0, 0.455);
     min-height: 60vh;
     color: var(--branco);
-
     text-align: center;
     padding-top: 15vh;
     padding-right: 2vw;
@@ -175,7 +173,7 @@ section.Imagem_paralax p {
 div.destaque_paralax {
     margin-top: 25px;
     display: inline-block;
-    background-color: rgba(10, 10, 10, 0.65); /* Fundo escuro semi-transparente */
+    background-color: rgba(10, 10, 10, 0.65);
     padding: 1.2vh 2vw;
     border-radius: 20px;
     border: 1px solid var(--amarelo_claro);
@@ -222,6 +220,7 @@ div.cartões_de_destaque {
 }
 
 div.cartões_de_destaque a {
+    font-size: 1.2rem;
     padding-top: 10px;
     display: inline-block;
     margin-bottom: 12px;
@@ -256,15 +255,15 @@ div.cartões_de_destaque:hover {
     transition-duration: 150ms;
 }
 
-section.input{
+section.input {
     text-align: center;
 }
 
-section.input h1{
+section.input h1 {
     margin-bottom: 35px;
 }
 
-section.input input{
+section.input input {
     display: block;
     margin: auto;
     background-color: var(--branco);
@@ -277,15 +276,16 @@ section.input input{
     height: 3em;
 }
 
-section.input input::placeholder{
+section.input input::placeholder {
     color: var(--amarelo_forte);
 }
 
-section.input input:hover{
+section.input input:hover {
     border: 1.6px solid var(--amarelo);
     box-shadow: 0px 0px 2px var(--amarelo_claro);
     transition-duration: 180ms;
 }
+
 
 /* =========================================
    RODAPÉ
@@ -294,7 +294,7 @@ footer {
     margin-top: 40px;
     padding: 25px 20px;
     background-color: #111111;
-    border-top: 4px solid var(--amarelo);
+    border-top: 4px solid var(--amarelo_forte);
     text-align: center;
     color: var(--branco);
     font-size: 14px;
@@ -304,7 +304,7 @@ footer p {
     margin: 0;
 }
 
-footer a{
+footer a {
     padding-top: 10px;
     display: inline-block;
     text-decoration: underline;
@@ -313,7 +313,7 @@ footer a{
     transition-duration: 230ms;
 }
 
-footer a:hover{
+footer a:hover {
     text-decoration: underline;
     text-underline-offset: 7px;
     color: var(--amarelo_claro);
