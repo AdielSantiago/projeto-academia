@@ -13,7 +13,7 @@
         <nav>
             <a href="html/Guia de Iniciaçao.html">Como Começar</a>
             <a href="html/planos.html">Mensalidades</a> 
-            <a href="#">Aparelhos</a>
+            <a href="html/aparelhos.html">Aparelhos</a>
             <a href="html/exercicios.html">Treinos</a>
             <a href="html/contato.html">Contato</a>
         
@@ -40,7 +40,7 @@
             </div>
             
             <div class="cartões_de_destaque">
-                <h4>🦾 <a href="">Entenda os Aparelhos</a></h4>
+                <h4>🦾 <a href="html/aparelhos.html">Entenda os Aparelhos</a></h4>
                 <p>
                     Chegar à zona de pesos e não saber o nome de cada máquina é normal. Criamos um guia visual simplificado para 
                     identificar polias e halteres. Saiba para que serve cada equipamento antes de ajustar o banco ou iniciar o treino.
@@ -50,7 +50,25 @@
 
         <section class="input">
             <h1>Onde Você quer treinar ?</h1>
-            <input type="text" placeholder="Digite aqui: ">
+            <form>
+                <input type="text" name="cidade_treino" list="lista_cidades" autocomplete="on" placeholder="Digite sua cidade aqui: ">
+                
+                <datalist id="lista_cidades">
+                    <option value="São Paulo - SP">
+                    <option value="Rio de Janeiro - RJ">
+                    <option value="Belo Horizonte - MG">
+                    <option value="Brasília - DF">
+                    <option value="Curitiba - PR">
+                    <option value="Porto Alegre - RS">
+                    <option value="Salvador - BA">
+                    <option value="Recife - PE">
+                    <option value="Fortaleza - CE">
+                    <option value="João Pessoa - PB">
+                    <option value="Goiânia - GO">
+                    <option value="Florianópolis - SC">
+                    <option value="Manaus - AM">
+                </datalist>
+            </form>
         </section>
     </main>
 
