@@ -89,33 +89,14 @@ nav > a:hover {
     text-shadow: 0px 0px 1px var(--branco);
 }
 
-/* Barra de navegação rápida secundária (âncoras) */
-body > nav {
-    display: block;
-    width: fit-content;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: var(--cinza);
-    border-radius: 30px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    padding: 10px 20px;
-}
-
-body > nav > a {
-    color: var(--branco);
-    margin: 0 8px;
-    font-size: 0.95rem;
-}
-
-body > nav > a:hover {
-    color: var(--amarelo);
-}
-
 section.header {
     margin-top: 10px;
     text-align: center;
+    color: var(--cinza_escurecido);
+}
+
+section.header h1 {
+    padding-bottom: 20px;
     color: var(--cinza_escurecido);
 }
 
@@ -129,6 +110,29 @@ section.header p {
     color: var(--cinza_escurecido);
 }
 
+section.header nav {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: var(--cinza);
+    border-radius: 30px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding: 10px 20px;
+}
+
+section.header nav a {
+    color: var(--branco);
+    margin: 0 8px;
+    font-size: 0.95rem;
+}
+
+section.header nav a:hover{
+    color: var(--amarelo);
+}
+
 /* =========================================
    CONTEÚDO PRINCIPAL (ARTIGOS E APARELHOS)
    ========================================= */
@@ -137,9 +141,9 @@ main {
     width: 90%;
     max-width: 1000px;
     margin: 0px auto;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 50px;
-    padding: 30px 20px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.250);
 }
@@ -157,11 +161,10 @@ section {
     margin-top: 40px;
 }
 
-/* ---------- Cada exercício (Com Flexbox igual à página de exercícios) ---------- */
 article {
     display: flex;
-    align-items: flex-start; /* Alinha a imagem e o título pelo topo */
-    gap: 25px;               /* Espaçamento perfeito entre a foto e o bloco de texto */
+    align-items: flex-start;
+    gap: 25px;
     margin-bottom: 25px;
     padding: 20px;
     background-color: var(--cinza_escurecido);
@@ -170,18 +173,16 @@ article {
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.29);
 }
 
-/* Foto da máquina (Coluna da esquerda) */
 article img {
     width: 280px;
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
-    flex-shrink: 0;          /* Impede que a imagem encolha ou deforme */
+    flex-shrink: 0;
 }
 
-/* Texto (Coluna da direita) */
 article div {
-    flex: 1;                 /* Ocupa todo o espaço restante ao lado da imagem sem invadir */
+    flex: 1;
 }
 
 h3 {
@@ -246,7 +247,7 @@ footer a:hover {
     }
 
     article {
-        flex-direction: column; /* No celular, empilha a foto em cima e o texto embaixo */
+        flex-direction: column;
     }
 
     article img {
