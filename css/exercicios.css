@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-
+/* =========================================
+   VARIÁVEIS GLOBAIS
+   ========================================= */
 :root { 
     --amarelo_claro: #FFF2A9;
     --amarelo: #FFDB4D;
@@ -18,7 +20,20 @@
     --fonte_paragrafos: 'Inter', sans-serif;
 }
 
-/* ---------- Geral ---------- */
+/* =========================================
+   RESET E CONFIGURAÇÕES GLOBAIS
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -28,15 +43,15 @@ body {
     line-height: 1.6;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-h1, h4, h3, h2{
+h1, h4, h3, h2 {
     font-family: var(--fonte_titulos);
 }
 
-p, a{
+p, a {
     font-family: var(--fonte_paragrafos);
 }
 
@@ -55,19 +70,6 @@ header > h1 {
     color: var(--branco);
     margin-bottom: 1vw;
     text-align: center;
-}
-
-section.header nav {
-    display: block;
-    width: fit-content;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: var(--cinza);
-    border-radius: 30px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    padding: 10px 20px;
 }
 
 nav {
@@ -89,7 +91,29 @@ nav > a:hover {
     color: var(--branco);
     transition-duration: 230ms;
     text-shadow: 0px 0px 1px var(--branco);
-    transition-duration: 200ms;
+}
+
+section.header nav {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: var(--cinza);
+    border-radius: 30px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding: 10px 20px;
+}
+
+section.header nav a {
+    color: var(--branco);
+    margin: 0 8px;
+    font-size: 0.95rem;
+}
+
+section.header nav a:hover {
+    color: var(--amarelo);
 }
 
 /* =========================================
@@ -106,35 +130,48 @@ main {
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.250);
 }
 
-section.header{
-    margin-top: -10px ;
+section.header {
+    margin-top: -10px;
     text-align: center;
-    color: var(--cinza_escurecido)
+    color: var(--cinza_escurecido);
 }
 
-section.header hr{
+section.header h1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: var(--cinza_escurecido);
+
+}
+
+section.header hr {
     height: 2px;
     border: transparent;
     background-color: var(--amarelo_forte);
 }
 
-section.header p{
+section.header p {
     color: var(--cinza_escurecido);
 }
-/* ---------- Grupos musculares ---------- */
+
+/* =========================================
+   SEÇÃO E TÍTULOS (H2)
+   ========================================= */
 section {
     margin-top: 40px;
 }
 
 h2 {
-    background-image: linear-gradient( to right, var(--amarelo_claro), transparent);
+    background-image: linear-gradient(to right, var(--amarelo_claro), transparent);
     margin: 0 0 20px 0;
     padding-left: 12px;
     border-left: 6px solid var(--amarelo_forte);
     color: var(--cinza_escurecido);
     font-size: 30px;
 }
-/* ---------- Cada exercício ---------- */
+
+/* =========================================
+   ARTIGOS E EXERCÍCIOS
+   ========================================= */
 article {
     line-height: 2em;
     display: flex;
@@ -147,7 +184,6 @@ article {
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.29);
 }
 
-/* Foto da máquina (lado esquerdo) */
 img {
     width: 280px;
     height: 200px;
@@ -156,7 +192,6 @@ img {
     margin-right: 25px;
 }
 
-/* Texto (lado direito) */
 article div {
     flex: 1;
 }
@@ -193,7 +228,7 @@ footer p {
     margin: 0;
 }
 
-footer a{
+footer a {
     padding-top: 10px;
     display: inline-block;
     text-decoration: underline;
@@ -202,16 +237,17 @@ footer a{
     transition-duration: 230ms;
 }
 
-footer a:hover{
+footer a:hover {
     text-decoration: underline;
     text-underline-offset: 7px;
     color: var(--amarelo_claro);
     transition-duration: 230ms;
 }
 
-/* ---------- Celulares e telas pequenas ---------- */
+/* =========================================
+   RESPONSIVIDADE (CELULARES E TELAS PEQUENAS)
+   ========================================= */
 @media (max-width: 700px) {
-
     h1 {
         font-size: 32px;
     }
